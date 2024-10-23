@@ -187,8 +187,7 @@ define Package/nginx-mod-luci
   TITLE:=Support file for Nginx
   URL:=http://nginx.org/
   DEPENDS:=+uwsgi +uwsgi-luci-support +nginx-ssl +nginx-mod-ubus
-  # TODO: add PROVIDES when removing nginx-mod-luci-ssl
-  # PROVIDES:=nginx-mod-luci-ssl
+  PROVIDES:=nginx-mod-luci-ssl
 endef
 
 define Package/nginx-mod-luci/description
