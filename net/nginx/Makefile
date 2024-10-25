@@ -429,6 +429,10 @@ ifneq ($(CONFIG_PACKAGE_nginx-mod-lua),)
 					LUAJIT_LIB=$(STAGING_DIR)/usr/lib
 endif
 
+ifneq ($(CONFIG_PACKAGE_nginx-mod-njs),)
+  CONFIGURE_VARS += NJS_LIBXSLT=NO
+endif
+
 CONFIGURE_VARS += CONFIG_BIG_ENDIAN=$(CONFIG_BIG_ENDIAN)
 
 CONFIGURE_ARGS += \
